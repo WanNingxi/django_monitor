@@ -19,16 +19,16 @@ class User(models.Model):
 		return self.name
 
 
-class Author(models.Model):
-	name = models.CharField(max_length=30)
+class IP_address(models.Model):
+	name = models.CharField(max_length=100)
 
 	def __str__(self):
 		return self.name
 
 
-class Book(models.Model):
-	name = models.CharField(max_length=30)
-	authors = models.ManyToManyField(Author)
+class status(models.Model):
+	name = models.CharField(max_length=10000)
+	authors = models.ManyToManyField(IP_address)
 
 	def __str__(self):
 		return self.name
