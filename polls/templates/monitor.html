@@ -1,0 +1,8 @@
+{% for ip_address in IP_addresses %}
+<div>
+	<h3> {{ ip_address.name }} </h3>
+	{% for status in ip_address.status_set.all %}
+	<li>{{status}}</li>
+	{% endfor %}
+</div>
+{% endfor %}

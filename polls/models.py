@@ -28,7 +28,7 @@ class IP_address(models.Model):
 
 class status(models.Model):
 	name = models.CharField(max_length=10000)
-	authors = models.ManyToManyField(IP_address)
+	IP_addresses = models.ManyToManyField(IP_address)
 
 	def __str__(self):
 		return self.name

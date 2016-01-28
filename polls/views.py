@@ -7,9 +7,9 @@ from django.http import HttpResponse
 
 def monitor(request):
 	IP_addresses = IP_address.objects.all()
-	return render_to_response('index.html',{'IP_addresses':IP_addresses})
+	return render_to_response('monitor.html',{'IP_addresses':IP_addresses})
 
 
 
-def index(request):
-	return HttpResponse('wanningxi')
+def test(request):
+	return render_to_response('test.html') 
